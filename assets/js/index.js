@@ -136,7 +136,8 @@ if(условие){
 */
 console.log('-----------------------------');
 let userValue1;
-userValue1 = prompt('Enter some value');
+userValue1 = 200;
+//userValue1 = prompt('Enter some value');
 /* 
 равно == или еще с типом ===
 больше >
@@ -190,3 +191,114 @@ if (userValue1 % 2 == 0) {
 } else {
   console.log('Число является нечетным');
 }
+
+/*
+Tasks
+3 вычислите стоимость покупки , которая состоит из N тетрадей (price1 грн) и  M ручек (price2 грн)
+4 обьявить переменную и дать ей значение (проинициализировать) или prompt. если переменная меньше 10 умножить ее на 30 
+иначе вычесть 100
+
+5* Напишите программу которая проверяет правильно ли пользователь вычислил “2+2”
+6* решить task задачу с учетом скидки 2% если сумма покупки превысит 500 грн
+*/
+
+// решение
+console.log('-----------------------------');
+// task 3
+let n1 = 3,
+  price1 = 15.5,
+  n2 = 5,
+  price2 = 21,
+  sumBuy;
+sumBuy = n1 * price1 + n2 * price2;
+console.log('Task1: ', sumBuy);
+// task 4
+let val1 = 20;
+// let val1 = prompt('Enter some value');
+if (val1 < 10) {
+  val1 = val1 * 30; // val1 *= 30;
+} else {
+  val1 = val1 - 100; // val1 -= 100;
+}
+console.log('Task2: ', val1);
+// task 5
+let val2;
+val2 = prompt('2+2=?');
+if (val2 == 4) {
+  alert('yes. you are right!');
+} else {
+  alert('sorry(((');
+}
+// task 6
+if (val1 >= 500) {
+  val1 = val1 * 0.98;
+}
+console.log('Sum with diskont is', val1);
+
+/*
+if (условие1)
+   инструкция1
+else if (условие2)
+   инструкция2
+else if (условие3)
+   инструкция3
+...
+else
+   инструкция
+
+*/
+
+/*
+let val3 = prompt();
+if (val3 == 1) {
+  console.log('число равно 1');
+} else if (val3 == 2) {
+  console.log('число равно 2');
+} else if (val3 == 3) {
+  console.log('число равно 3');
+} else {
+  console.log('число НЕ равно 1 , 2 или 3');
+}
+*/
+
+let userRole;
+if (userRole == 'user') {
+  // действия
+} else if (userRole == 'moderator') {
+  // действия
+} else if (userRole == 'admin') {
+  // действия
+} else {
+  console.log('Неопределенная роль. Прав нет');
+}
+
+// логические операторы для условия
+// И &&
+// ИЛИ ||
+/*
+let val4 = prompt();
+// проверим находится ли число от 0 до 100
+if (val4 > 0 && val4 < 100) {
+  console.log('число от 0 до 100');
+} else {
+  console.log('число НЕ от 0 до 100');
+}
+*/
+
+// задача определить в какую четверть часа тноситься введенное число минут
+//1 : 0 -15
+//2: 15-30
+//3: 30-45
+//4: 45-60
+let valMinutes = prompt('Enter minutes (0-60)');
+let partOfHour;
+if (valMinutes > 0 && valMinutes < 15) {
+  partOfHour = 1;
+} else if (valMinutes >= 15 && valMinutes < 30) {
+  partOfHour = 2;
+} else if (valMinutes >= 30 && valMinutes < 45) {
+  partOfHour = 3;
+} else {
+  partOfHour = 4;
+}
+console.log(`${partOfHour} part of a hour`);
